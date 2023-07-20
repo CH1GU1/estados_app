@@ -21,17 +21,11 @@ class Pagina2Page extends StatelessWidget {
           MaterialButton(
             color: Colors.blue,
             onPressed: () {
-
               final newUser = Usuario(
-                nombre: 'Kevin Mera',
-                edad: 21,
-                profesiones: [
-                  'Flutter Developer', 
-                  'Security Engineer'
-                ]
-              );
+                  nombre: 'Kevin Mera',
+                  edad: 21,
+                  profesiones: ['Flutter Developer', 'Security Engineer']);
               usuarioCubit.seleccionarUsuario(newUser);
-
             },
             child: const Text(
               'Establecer Usuario',
@@ -40,7 +34,9 @@ class Pagina2Page extends StatelessWidget {
           ),
           MaterialButton(
             color: Colors.blue,
-            onPressed: () {},
+            onPressed: () {
+              usuarioCubit.cambiarEdad(30);
+            },
             child: const Text(
               'Cambiar Edad',
               style: TextStyle(color: Colors.white),
@@ -48,7 +44,9 @@ class Pagina2Page extends StatelessWidget {
           ),
           MaterialButton(
             color: Colors.blue,
-            onPressed: () {},
+            onPressed: () {
+              usuarioCubit.agregarProfesion('IT Infraestructure Engineer');
+            },
             child: const Text(
               'Añadir Profesión',
               style: TextStyle(color: Colors.white),
