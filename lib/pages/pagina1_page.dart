@@ -67,7 +67,7 @@ class InformacionUsuario extends StatelessWidget {
             style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
           ),
           const Divider(),
-          ...user.profesiones!
+          ...user.profesiones
               .map((prof) => ListTile(
                     title: Text(prof),
                   ))
