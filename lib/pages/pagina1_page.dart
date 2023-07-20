@@ -11,6 +11,14 @@ class Pagina1Page extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Pagina 1'),
+        actions: [
+          IconButton(
+              onPressed: () {
+                BlocProvider.of<UserBloc>(context, listen: false)
+                    .add(DeleteUserEvent());
+              },
+              icon: const Icon(Icons.exit_to_app))
+        ],
       ),
       body: BlocBuilder<UserBloc, UserState>(
         builder: (_, state) {

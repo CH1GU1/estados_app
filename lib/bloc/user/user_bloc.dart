@@ -19,9 +19,15 @@ class UserBloc extends Bloc<UserEvent, UserState> {
     on<AddProfessionEvent>((event, emit) {
       if (!state.existUser) return;
 
-      ...state!.user.profesiones.
+      final newProfesiones = [...state.user!.profesiones, event.profesion];
 
-      emit(UserSetState(state.user!.copyWith(profesiones: event.profesiones)));
+      emit(UserSetState(state.user!.copyWith(profesiones: newProfesiones)));
+    });
+
+    on<DeleteUserEvent>((_, emit) {
+      if (!state.existUser) return;
+
+      emit(const UserInitialState());
     });
   }
 }
