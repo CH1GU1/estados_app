@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class Pagina2Page extends StatelessWidget {
+  const Pagina2Page({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -12,28 +14,28 @@ class Pagina2Page extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           MaterialButton(
-            child: Text(
+            color: Colors.blue,
+            onPressed: () {},
+            child: const Text(
               'Establecer Usuario',
               style: TextStyle(color: Colors.white),
             ),
-            color: Colors.blue,
-            onPressed: () {},
           ),
           MaterialButton(
-            child: Text(
+            color: Colors.blue,
+            onPressed: () {},
+            child: const Text(
               'Cambiar Edad',
               style: TextStyle(color: Colors.white),
             ),
-            color: Colors.blue,
-            onPressed: () {},
           ),
           MaterialButton(
-            child: Text(
+            color: Colors.blue,
+            onPressed: () {},
+            child: const Text(
               'Añadir Profesión',
               style: TextStyle(color: Colors.white),
             ),
-            color: Colors.blue,
-            onPressed: () {},
           ),
         ],
       )),
